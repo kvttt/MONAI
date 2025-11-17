@@ -409,7 +409,7 @@ class VoxelMorph(nn.Module):
         moving_seg = torch.randint(0, 4, (1, 1, 160, 192, 224)).float()
         moving_seg = one_hot(moving_seg, num_classes=4)
         fixed_keypoints = torch.tensor([[[80, 96, 112], [40, 48, 56]]]).float()
-        warped_img, warped_seg, warped_keypoints, ddf = net( moving, fixed, moving_seg=moving_seg, fixed_keypoints=fixed_keypoints )
+        warped_img, warped_seg, warped_keypoints, ddf = net(moving, fixed, moving_seg=moving_seg, fixed_keypoints=fixed_keypoints)
 
     """
 
